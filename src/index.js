@@ -5,19 +5,34 @@ addEventListener("fetch", (event) => {
 
 const dockerHub = "https://registry-1.docker.io";
 
+// const routes = {
+//   // production
+//   "docker.libcuda.so": dockerHub,
+//   "quay.libcuda.so": "https://quay.io",
+//   "gcr.libcuda.so": "https://gcr.io",
+//   "k8s-gcr.libcuda.so": "https://k8s.gcr.io",
+//   "k8s.libcuda.so": "https://registry.k8s.io",
+//   "ghcr.libcuda.so": "https://ghcr.io",
+//   "cloudsmith.libcuda.so": "https://docker.cloudsmith.io",
+
+//   // staging
+//   "docker-staging.libcuda.so": dockerHub,
+// };
 const routes = {
   // production
-  "docker.libcuda.so": dockerHub,
-  "quay.libcuda.so": "https://quay.io",
-  "gcr.libcuda.so": "https://gcr.io",
-  "k8s-gcr.libcuda.so": "https://k8s.gcr.io",
-  "k8s.libcuda.so": "https://registry.k8s.io",
-  "ghcr.libcuda.so": "https://ghcr.io",
-  "cloudsmith.libcuda.so": "https://docker.cloudsmith.io",
+  "docker.hongsheng.plus": dockerHub,
+  "quay.hongsheng.plus": "https://quay.io",
+  "gcr.hongsheng.plus": "https://gcr.io",
+  "k8s-gcr.hongsheng.plus": "https://k8s.gcr.io",
+  "k8s.hongsheng.plus": "https://registry.k8s.io",
+  "ghcr.hongsheng.plus": "https://ghcr.io",
+  "cloudsmith.hongsheng.plus": "https://docker.cloudsmith.io",
 
   // staging
-  "docker-staging.libcuda.so": dockerHub,
+  "docker-staging.hongsheng.plus": dockerHub,
 };
+
+
 
 function routeByHosts(host) {
   if (host in routes) {
